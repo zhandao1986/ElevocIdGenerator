@@ -1,2 +1,57 @@
-# ElevocIdGenerator
-不重复订单号生成类
+# 生成不重复纯数字订单号（重复的概率很低）
+## 16位以上id号里面前几位是当前的时间字段
+## 非时间字段的ID算法使用的是tweeter的snowflake：
+> snowflake算法说明:
+>   (a) id构成: 42位的时间前缀 + 10位的节点标识 + 12位的sequence避免并发的数字(12位不够用时强制得到新的时间前缀)
+>       注意这里进行了小改动: snowkflake是5位的datacenter加5位的机器id; 这里变成使用10位的机器id
+>   (b) 对系统时间的依赖性非常强，需关闭ntp的时间同步功能。当检测到ntp时间调整后，将会拒绝分配id
+
+*注:此sdk在snowflake算法调用失败的时候，会使用Java自带的随机数算法来代替，以保证业务系统的连续性。
+
+<br>
+
+# 方法说明
+## 1.uuid8
+### 生成8位订单号（不推荐）
+### Id组成：纯8位随机数字
+### 样例调用：
+```java
+public static void main(String[] args) {
+    String id = ElevocIdGenerator.uuid8();
+}
+```
+### 样例输出：
+> 49568404
+
+## 2.uuid16
+### 生成16位订单号
+### Id组成：yyMMdd + (10位随机数字)
+```java
+public static void main(String[] args) {
+    String id = ElevocIdGenerator.uuid16();
+}
+```
+### 样例输出：
+> 1803264956849853
+
+## 3.uuid32
+### 生成32位订单号
+### Id组成：yyyyMMddHHmmss + (18位随机数字)
+```java
+public static void main(String[] args) {
+    String id = ElevocIdGenerator.uuid32();
+}
+```
+### 样例输出：
+> 20180326113234495685615493320704
+
+## 4.uuid64
+### 生成64位订单号
+### Id组成：yyyyMMddHHmmssSSS + (47位随机数字)
+```java
+public static void main(String[] args) {
+    String id = ElevocIdGenerator.uuid64();
+}
+```
+### 样例输出：
+> 2018032611342298134985027466447814478109523598834209932408631434
