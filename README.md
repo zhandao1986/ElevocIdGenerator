@@ -13,7 +13,7 @@
 
 <br>
 
-# 方法说明
+# 一：方法说明
 ## 1.uuid8
 ### 生成8位订单号（不推荐）
 ### Id组成：纯8位随机数字
@@ -62,5 +62,8 @@ public static void main(String[] args) {
 ### 样例输出：
 > 2018032611342298134985027466447814478109523598834209932408631434
 
-# JAR下载
+# 二：JAR下载
 [ElevocIdGenerator.jar](https://github.com/imu-hupeng/ElevocIdGenerator/releases/download/v0.0.1/ElevocIdGenerator.jar)
+
+# 三：授权协议
+本项目遵循Apache协议,完全开源,文档齐全,永远免费(商用也是)
