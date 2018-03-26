@@ -1,3 +1,6 @@
+![https://github.com/imu-hupeng/ElevocIdGenerator/releases/download/v0.0.1/ElevocIdGenerator.jar](https://img.shields.io/badge/downloads%400.0.1-3.23k-brightgreen.svg)
+![](https://img.shields.io/hexpm/l/plug.svg)
+![](https://img.shields.io/badge/version-0.0.1-yellow.svg)
 # 生成不重复纯数字订单号（重复的概率很低）
 ## 16位以上id号里面前几位是当前的时间字段
 ## 非时间字段的ID算法使用的是tweeter的snowflake：
@@ -58,3 +61,6 @@ public static void main(String[] args) {
 ```
 ### 样例输出：
 > 2018032611342298134985027466447814478109523598834209932408631434
+
+# JAR下载
+[ElevocIdGenerator.jar](https://github.com/imu-hupeng/ElevocIdGenerator/releases/download/v0.0.1/ElevocIdGenerator.jar)
