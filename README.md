@@ -26,6 +26,7 @@ public static void main(String[] args) {
 ## 2.uuid16
 ### 生成16位订单号
 ### Id组成：yyMMdd + (10位随机数字)
+### 样例调用：
 ```java
 public static void main(String[] args) {
     String id = ElevocIdGenerator.uuid16();
@@ -37,6 +38,7 @@ public static void main(String[] args) {
 ## 3.uuid32
 ### 生成32位订单号
 ### Id组成：yyyyMMddHHmmss + (18位随机数字)
+### 样例调用：
 ```java
 public static void main(String[] args) {
     String id = ElevocIdGenerator.uuid32();
@@ -48,6 +50,7 @@ public static void main(String[] args) {
 ## 4.uuid64
 ### 生成64位订单号
 ### Id组成：yyyyMMddHHmmssSSS + (47位随机数字)
+### 样例调用：
 ```java
 public static void main(String[] args) {
     String id = ElevocIdGenerator.uuid64();

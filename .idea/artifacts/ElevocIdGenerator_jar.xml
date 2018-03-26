@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ElevocIdGenerator:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ElevocIdGenerator_jar</output-path>
+    <root id="archive" name="ElevocIdGenerator.jar">
+      <element id="module-output" name="ElevocIdGenerator" />
+    </root>
+  </artifact>
+</component>
