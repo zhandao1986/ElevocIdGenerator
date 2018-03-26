@@ -1,8 +1,8 @@
 ![https://github.com/imu-hupeng/ElevocIdGenerator/releases/download/v0.0.1/ElevocIdGenerator.jar](https://img.shields.io/badge/downloads%400.0.1-3.23k-brightgreen.svg)
 ![](https://img.shields.io/hexpm/l/plug.svg)
 ![](https://img.shields.io/badge/version-0.0.1-yellow.svg)
-# 生成不重复纯数字订单号（重复的概率很低）
-## 16位以上id号里面前几位是当前的时间字段
+# 生成不重复纯数字订单号（理论上 重复的概率很低）
+## 16位以上ID号里面前几位是当前的时间字段
 ## 非时间字段的ID算法使用的是tweeter的snowflake：
 > snowflake算法说明:
 >   (a) id构成: 42位的时间前缀 + 10位的节点标识 + 12位的sequence避免并发的数字(12位不够用时强制得到新的时间前缀)
@@ -10,6 +10,7 @@
 >   (b) 对系统时间的依赖性非常强，需关闭ntp的时间同步功能。当检测到ntp时间调整后，将会拒绝分配id
 
 *注:此sdk在snowflake算法调用失败的时候，会使用Java自带的随机数算法来代替，以保证业务系统的连续性。
+### 此ID生成器工具类用于公司后台项目生成微信支付ID（要求不重复，理论上32位就足够，且ID的前几位为时间字段，方便从ID号直接可以看出某个ID的生成时间）
 
 <br>
 
