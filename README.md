@@ -40,7 +40,7 @@ public static void main(String[] args) {
 > 1803264956849853
 
 ## 3.uuid32
-### 生成32位订单号
+### 生成32位订单号（推荐）
 ### Id组成：yyyyMMddHHmmss + (18位随机数字)
 ### 样例调用：
 ```java
